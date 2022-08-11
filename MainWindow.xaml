@@ -1,0 +1,33 @@
+﻿<Window x:Class="S1P2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:S1P2"
+        mc:Ignorable="d"
+        Title="Watt's Law Calculator" FontFamily="Arial" FontStretch = "UltraExpanded" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FFD8E9EA">
+        <Menu x:Name="toolbar" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="792">
+            <MenuItem Name="noName" Header="File" FontSize="22" FontFamily="Arial"  Height="32" Width="45">
+                <MenuItem Name="Close"  Header="Close" FontSize="22" FontFamily="Arial" Click="Close_Click" ></MenuItem>
+            </MenuItem>
+        </Menu>
+        <Label x:Name="lblCalcType" Content="Choose calculation type" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="30"/>
+        <Label x:Name="lblFirstValue" Content="Val 1" HorizontalAlignment="Left" Margin="28,104,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="30"/>
+        <Label x:Name="lblSecondValue" Content="Val 2" HorizontalAlignment="Left" Margin="28,181,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="30"/>
+        <Label x:Name="lblResult" Content="Results" HorizontalAlignment="Left" Margin="28,256,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="30"/>
+        <Button x:Name="btnCalculate" Content="Calculate" HorizontalAlignment="Left" Margin="28,338,0,0" VerticalAlignment="Top" Width="155" FontFamily="Arial" FontSize="30" Height="38" Click="btnCalculate_Click"/>
+        <Button x:Name="btnClar" Content="Clear" HorizontalAlignment="Left" Margin="495,338,0,0" VerticalAlignment="Top" Width="155" FontFamily="Arial" FontSize="30" Height="36" Click="btnClar_Click"/>
+        <TextBox x:Name="txtFirstValue" HorizontalAlignment="Left" Height="44" Margin="495,110,0,0" TextWrapping="Wrap" Text="" FontFamily="Arial" FontSize="30" VerticalAlignment="Top" Width="258"/>
+        <TextBox x:Name="txtSecondValue" HorizontalAlignment="Left" Height="43" Margin="495,185,0,0" TextWrapping="Wrap" Text="" FontFamily="Arial" FontSize="30" VerticalAlignment="Top" Width="258"/>
+        <TextBox x:Name="txtResults" HorizontalAlignment="Left" Height="43" Margin="495,256,0,0" TextWrapping="Wrap" Text="" FontFamily="Arial" FontSize="30" VerticalAlignment="Top" Width="258" IsEnabled="False"/>
+        <ComboBox x:Name="cboCalcType" SelectedIndex="0" HorizontalAlignment="Left" Margin="495,46,0,0" VerticalAlignment="Top" Text="TextBox" FontFamily="Arial" FontSize="30" Width="258" Height="44" SelectionChanged="cboCalcType_SelectionChanged">
+            <ComboBoxItem>Power</ComboBoxItem>
+            <ComboBoxItem>Current</ComboBoxItem>
+            <ComboBoxItem>Voltage</ComboBoxItem>
+        </ComboBox>
+        
+
+
+    </Grid>
+</Window>
